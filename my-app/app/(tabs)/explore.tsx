@@ -6,6 +6,7 @@ import { ExternalLink } from '@/components/ExternalLink';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+//api fetch is at bottom of this file
 
 export default function TabTwoScreen() {
   return (
@@ -100,3 +101,8 @@ const styles = StyleSheet.create({
     gap: 8,
   },
 });
+
+fetch('localhost:3001')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
